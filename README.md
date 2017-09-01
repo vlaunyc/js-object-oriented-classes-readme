@@ -28,8 +28,8 @@ We currently have declared our constructor function such that it sets both prope
 
 It works fine, but its not very pretty.  The problem is that our constructor and use of prototypes are separated from one another.  We want a way to encase both the attributes and functionality produced from a constructor in one spot.  
 
-## ES6 Classes
-ECMAScript 6 introduces the concept of a `class` to JavaScript that provides a handy shortcut for organizing our objects.
+## ES2015 Classes
+ECMAScript 2015 introduces the concept of a `class` to JavaScript that provides a handy shortcut for organizing our objects.
 
 It's important to note that the `class` keyword doesn't actually turn JavaScript into a class-based object-oriented paradigm. It's just *syntactic sugar*, or a nice abstraction, over the prototypal object creation we've been doing.
 
@@ -53,11 +53,11 @@ sarah.sayHello();
 
 Instead of our `User` constructor function, we now have a `class User`. Within the body of the class, we can define a special function named `constructor` which is run each time a new object is initialized from the User class. In the end, we still instantiate a `new User` the same way.
 
-We also define our `sayHello` function directly in the body of the class. However, unlike defining it in the constructor function, we can verify that `sayHello` is defined on the User prototype by examining `User.prototype`.
+We also define our `sayHello` function directly in the body of the class. However, unlike defining it in the constructor function, we can verify that `sayHello` is defined on the User prototype by examining `User.prototype`.  Also notice that we no longer write the word `function` when defining a method on a JavaScript class.
 
-## ES6 Class Inheritance With extends
+## ES2015 Class Inheritance With extends
 
-We can also easily inherit from ES6 classes.  Inheritance is used when we would like to reuse the same functionality from a previously defined class, but would like to extend that classes functionality.
+We can also easily inherit from ES2015 classes.  Inheritance is used when we would like to reuse the same functionality from a previously defined class, but would like to extend that classes functionality.
 
 For example, say we want to create a `Teacher` class, such that objects initialized from the Teacher class will inherit the same methods declared on the `User` class. We can just define a new class and use the `extends` keyword.
 
@@ -89,7 +89,7 @@ tom.teachMath()
 
 ```
 
-Here, we've *extended*, or inherited from `User` when creating the new `Teacher` class. We also added a new method teachMath that available to Teacher objects but is not available to User objects.  We can override an inherited method simply by defining another method with the same name.
+Here, we've *extended*, or inherited from `User` when creating the new `Teacher` class. We also added a new method `teachMath` that available to Teacher objects but is not available to User objects.  We can override an inherited method simply by defining another method with the same name.
 
 ```js
 class User {
@@ -149,7 +149,7 @@ If you look at the line `super.sayHello()`, what we're doing there is calling th
 
 ## Summary
 
-In this lesson, we explored the new `class` syntax of ES6 and how to create and extend classes using it.
+In this lesson, we explored the new `class` syntax of ES2015 and how to create and extend classes using it.
 
 ## Resources
 
