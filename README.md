@@ -57,7 +57,7 @@ We also define our `sayHello` function directly in the body of the class. Howeve
 
 ## ES2015 Class Inheritance With extends
 
-We can also easily inherit from ES2015 classes.  Inheritance is used when we would like to reuse the same functionality from a previously defined class, but would like to extend that classes functionality.
+We can also easily inherit from ES2015 classes.  Inheritance is used when we would like to reuse the same functionality from a previously defined class, but would like to extend that class's functionality.
 
 For example, say we want to create a `Teacher` class, such that objects initialized from the Teacher class will inherit the same methods declared on the `User` class. We can just define a new class and use the `extends` keyword.
 
@@ -113,7 +113,7 @@ let fred = new User('fred', 'fred@gmail.com')
 fred.sayHello()
 // Hello, my name is fred
 
-let tom = new User('tom', 'tom@gmail.com')
+let tom = new Teacher('tom', 'tom@gmail.com')
 tom.sayHello()
 // hello
 ```
