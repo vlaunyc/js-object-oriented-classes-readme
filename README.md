@@ -141,8 +141,11 @@ class Teacher extends User {
 }
 
 tom.sayHello()
-// Hello, my name is fred
+// Hello, my name is tom
 // hello
+
+fred.sayHello()
+// Hello, my name is fred
 ```
 
 If you look at the line `super.sayHello()`, what we're doing there is calling the `sayHello` method of the *superclass*, or the class (`User`) that our `Teacher` class inherits from. We wanted to preserve the behavior that was already there and then add to it, so rather than repeat the code, the `super` object gives us access to it programmatically.
